@@ -1,0 +1,31 @@
+{
+  "name": "@proyth/language",
+  "description": "Proyth language",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.7.0"
+  },
+  "dependencies": {
+    "@singleware/class": "^1.1.19",
+    "@singleware/parsing": "^1.0.4"
+  },
+  "devDependencies": {
+    "@singleware/testing": "^1.0.1",
+    "@types/node": "^10.14.4",
+    "prettier": "^1.17.0",
+    "typescript": "^3.4.3"
+  },
+  "prettier": {
+    "printWidth": 140,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": true
+  },
+  "scripts": {
+    "test": "node ./release/tests/suite.js",
+    "start": "node ./release/source/main.js",
+    "build": "npm run make-source && npm run make-tests",
+    "make-source": "tsc -p ./source",
+    "make-tests": "tsc -p ./tests"
+  }
+}
